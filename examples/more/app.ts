@@ -25,7 +25,7 @@ instance.get('/more/get').then(res => {
   console.log(res)
 }) */
 
-const instance = axios.create()
+/* const instance = axios.create()
 
 function calculatePercentage(loaded: number, total: number) {
   return Math.floor(loaded * 1.0) / total
@@ -82,4 +82,15 @@ uploadEl.addEventListener('click', e => {
 
     instance.post('/more/upload', data)
   }
+}) */
+
+axios.post('/more/post', {
+  a: 1
+}, {
+  auth: {
+    username: 'wuyuan',
+    password: '123456'
+  }
+}).then(res => {
+  console.log(res)
 })
